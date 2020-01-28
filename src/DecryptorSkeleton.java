@@ -21,7 +21,7 @@ import java.util.HashMap;
  *
  * Place your @author tags here.
  * @author First Last : netid@iastate.edu
- * @author ...
+ * @author ... Gavin Ray : garay@iastate.edu
  * @author ...
  * @author ...
  */
@@ -78,8 +78,19 @@ public class DecryptorSkeleton {
      */
     public static void shiftArrayValues(int[] toDecrypt) {
         // TODO
-    }
+    	for (int i = 0; i < 27; i++){
+    		if (i%3 == 0){
+    			toDecrypt[i] -= 1;
+    		}
+    		else if (i%3 == 1){
+    			toDecrypt[i] -= 2;
+    		}
+    		else{
+    			toDecrypt[i] -= 3;
+    		}
+    	}
 
+    }
 
     /**
      * STEP 3: COMPLETE THIS METHOD. ONCE COMPLETED, HAVE THE TEAM MEMBER
