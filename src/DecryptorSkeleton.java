@@ -21,7 +21,7 @@ import java.util.HashMap;
  *
  * Place your @author tags here.
  * @author First Last : netid@iastate.edu
- * @author ...
+ * @author Marcus Jakubowsky : marcusj1@iastate.edu
  * @author ...
  * @author ...
  */
@@ -93,7 +93,9 @@ public class DecryptorSkeleton {
      * @param toDecrypt - The array to be decoded.
      */
     public static void divideArrayValues(int[] toDecrypt) {
-        // TODO
+        for(int i = 0; i < toDecrypt.length; i++) {
+        	toDecrypt[i] = toDecrypt[i] / 5;
+        }
     }
 
 
@@ -140,7 +142,10 @@ public class DecryptorSkeleton {
 
         StringBuilder solution = new StringBuilder();
 
-        // TODO
+        for(int i = 0; i < toDecrypt.length; i++) {
+        	solution.append(cypher.get(toDecrypt[i]));
+   
+        }
 
         solution.append('!');
         return solution.toString();
