@@ -21,8 +21,8 @@ import java.util.HashMap;
  *
  * Place your @author tags here.
  * @author First Last : netid@iastate.edu
- * @author ...
- * @author ...
+ * @author Marcus Jakubowsky : marcusj1@iastate.edu
+ * @author Gavin Ray : garay@iastate.edu
  * @author Christian Silva Zuniga : csz239@iastate.edu
  */
 public class DecryptorSkeleton {
@@ -84,8 +84,19 @@ public class DecryptorSkeleton {
      */
     public static void shiftArrayValues(int[] toDecrypt) {
         // TODO
-    }
+    	for (int i = 0; i < 27; i++){
+    		if (i%3 == 0){
+    			toDecrypt[i] -= 1;
+    		}
+    		else if (i%3 == 1){
+    			toDecrypt[i] -= 2;
+    		}
+    		else{
+    			toDecrypt[i] -= 3;
+    		}
+    	}
 
+    }
 
     /**
      * STEP 3: COMPLETE THIS METHOD. ONCE COMPLETED, HAVE THE TEAM MEMBER
@@ -99,7 +110,9 @@ public class DecryptorSkeleton {
      * @param toDecrypt - The array to be decoded.
      */
     public static void divideArrayValues(int[] toDecrypt) {
-        // TODO
+        for(int i = 0; i < toDecrypt.length; i++) {
+        	toDecrypt[i] = toDecrypt[i] / 5;
+        }
     }
 
 
@@ -146,7 +159,10 @@ public class DecryptorSkeleton {
 
         StringBuilder solution = new StringBuilder();
 
-        // TODO
+        for(int i = 0; i < toDecrypt.length; i++) {
+        	solution.append(cypher.get(toDecrypt[i]));
+   
+        }
 
         solution.append('!');
         return solution.toString();
