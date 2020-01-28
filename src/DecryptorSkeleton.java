@@ -23,7 +23,7 @@ import java.util.HashMap;
  * @author First Last : netid@iastate.edu
  * @author ...
  * @author ...
- * @author ...
+ * @author Christian Silva Zuniga : csz239@iastate.edu
  */
 public class DecryptorSkeleton {
     public static void main(String[] args) {
@@ -58,7 +58,13 @@ public class DecryptorSkeleton {
      * @param toDecrypt - The array to be decoded.
      */
     public static void convertBinaryArrayToDecimalArray(int[] toDecrypt) {
-        // TODO
+    	for (int i = 0; i < toDecrypt.length; i++) {
+    		String binstr = Integer.toString(toDecrypt[i]);
+    		int decimal = Integer.parseInt(binstr,2);
+    		toDecrypt[i] = decimal;
+    		
+    		
+    	}
     }
 
 
